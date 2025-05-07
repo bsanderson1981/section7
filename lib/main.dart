@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Dicee'),
           backgroundColor: Colors.red,
+
         ),
         body: DicePage(),
       ),
@@ -26,6 +27,19 @@ class MyApp extends StatelessWidget {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // optional: centers vertically
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50.0,
+                  foregroundImage: AssetImage('images/dice1.png'),
+                ),
+              ],
+            )
+        )
+    );
   }
 }
