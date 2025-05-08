@@ -24,13 +24,17 @@ class MyApp extends StatelessWidget {
 }
 
 class DicePage extends StatelessWidget {
+  const DicePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(child: Image.asset('images/dice1.png')),
-        Expanded(child: Image.asset('images/dice1.png'))
-      ],
+    return Center(
+      child: Row(  //wrap  For Mac ... same as above but use option+Enter.
+        children: <Widget>[
+          Expanded(child: Image.asset('images/dice1.png')),
+          Expanded(child: Image.asset('images/dice1.png'))
+        ],
+      ),
     );
   }
 }
