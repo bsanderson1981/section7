@@ -7,7 +7,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,10 +14,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red,
         appBar: AppBar(
           title: Text('Dicee'),
+          centerTitle: true,
           backgroundColor: Colors.red,
-
         ),
-        body: DicePage(),
+        body: DicePage(), // ✅ Move DicePage here
       ),
     );
   }
@@ -27,19 +26,11 @@ class MyApp extends StatelessWidget {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // optional: centers vertically
-              children: <Widget>[
-                CircleAvatar(
-                  radius: 50.0,
-                  foregroundImage: AssetImage('images/dice1.png'),
-                ),
-              ],
-            )
-        )
+    return Row(
+      children: <Widget>[
+        Expanded(child: Image.asset('images/dice1.png')),
+        Expanded(child: Image.asset('images/dice1.png'))
+      ],
     );
   }
 }
