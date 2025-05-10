@@ -50,30 +50,18 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  rollDice();
-                  /* numberleft = Random().nextInt(6) + 1;
-                  print('left button $numberleft');
-                  numberright = Random().nextInt(6) + 1;
-                  print('right button $numberright');
-*/
-                });
+                rollDice();
               },
-              child: Image.asset('images/dice$numberleft.png'),
 
+              child: Image.asset('images/dice$numberleft.png'),
             ),
           ),
+
           Expanded(
             child: TextButton(
               onPressed: () {
                 setState(() {
                   rollDice();
-                  /*numberright = Random().nextInt(6) + 1;
-                  print('right button $numberright');
-                  numberleft = Random().nextInt(6) + 1;
-                  print('left button $numberleft');*/
-
-
                 });
               },
               child: Image.asset('images/dice$numberright.png'),
